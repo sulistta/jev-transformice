@@ -1,0 +1,27 @@
+[state]
+provider = "auto"
+
+[input]
+backend = "auto"
+
+[observer]
+record = false
+
+[decision]
+controller = "human"
+control_mode = "raw"
+max_state_age_ms = 300
+deadline_ms = 200
+fallback = "keep"
+
+[chunked]
+max_segments = 4
+max_horizon_ms = 350
+min_segment_ms = 20
+max_segment_ms = 200
+
+[safety]
+release_on_focus_loss = true
+
+[logging]
+level = "INFO"
